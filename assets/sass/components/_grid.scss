@@ -1,0 +1,120 @@
+// Main grid
+.video-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "favourites"
+        "corporate"
+        "tourism"
+        "about"
+        "realestate"
+        "charity"
+        "technology"
+        "music"
+        "brands"
+        "other";
+
+    margin: -2rem auto 4rem auto;
+}
+
+.row-favourites {
+    grid-area: favourites;
+}
+
+.row-new {
+    grid-area: new;
+}
+
+.row-about {
+    grid-area: about;
+}
+
+.row-tourism {
+    grid-area: tourism;
+}
+
+.row-corporate {
+    grid-area: corporate;
+}
+
+.row-technology {
+    grid-area: technology;
+}
+
+.row-feature-brands {
+    grid-area: brands;
+}
+
+.row-music {
+    grid-area: music;
+}
+
+.row-other {
+    grid-area: other;
+}
+
+.row-not-for-profit {
+    grid-area: charity;
+}
+
+.row-real-estate-development {
+    grid-area: realestate;
+}
+
+// Rows
+.video-row {
+    padding: 3rem 0;
+    margin-left: 1rem;
+}
+
+@media(max-width: 575.98px) {
+    .video-row {
+        margin-left: 0
+    }
+}
+
+// About Section
+.row-about {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+
+    img {
+        margin-bottom: 15px;
+    }
+
+    .vf-col-1, .vf-col-2 {
+        flex: 1 1 100%;
+        padding: 1rem;
+    }
+
+    @media (min-width: 991px) {
+        flex-direction: row;
+        align-items: center;
+
+        .vf-col-1 {
+            flex-basis: 1000px;
+            padding: 0;
+        }
+        .vf-col-2 {
+            flex: 780px;
+            padding: 1rem;
+            padding-left: 2.25rem;
+        }
+    }
+}
+
+@media(max-width: 575.98px) {
+    .row-about {
+        margin: 0;
+    }
+    .vf-col-2 img {
+        display: none;
+    }
+}
+
+// If no post
+.no-post {
+    display: none;
+}

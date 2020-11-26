@@ -1,0 +1,149 @@
+.video-meta {
+    color: $light;
+    display: flex;
+    flex-direction: column;
+
+    .vf-btn-play-card {
+        color: white;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: $light;
+    }
+
+    time {
+        display: inline-block;
+        font-size: 17px;
+        padding: 5px 15px;
+        border: 1px solid $light;
+    }
+
+    .vf-btn-play-card,
+    time,
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        text-transform: capitalize;
+        font-size: 17px;
+        list-style: none;
+        margin-bottom: 0;
+
+        li {
+            position: relative;
+            margin-right: 20px;
+
+            &:after {
+                content: "•";
+                font-size: 14px;
+                position: absolute;
+                right: -13px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:last-child {
+                margin-right: 0;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .entry-body {
+        font-size: 17px;
+        &.has-image * {
+            display: none;
+        }
+        &.has-content img {
+            display: none;
+        }
+    }
+
+    .entry-body.has-image img {
+        display: block;
+    }
+}
+
+// Alternative style for modal
+.video-modal .video-meta {
+    justify-content: center;
+    .entry-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        time {
+            margin-right: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// Actions
+.meta-actions {
+    margin-bottom: 15px;
+
+    .button:first-child {
+        margin-right: 10px;
+    }
+
+    .button {
+        background: rgba(0,161,237,0.51);
+        padding: 10px 40px;
+        border-radius: 5px;
+        font-weight: 600;
+        color: $light;
+        transition: 0.2s linear;
+        display: inline-block;
+
+        &:hover {
+            color: white;
+            background: #00a1ed;
+        }
+    }
+}
+
+@media(max-width: 575.98px) {
+    .meta-actions {
+        display: flex;
+        justify-content: space-between;
+        .button {
+            margin-bottom: 1rem;
+            padding: 10px 30px;
+        }
+    }
+}
+
+.vf-btn-more {
+    text-align: center;
+}
+
+.vf-btn-close {
+    text-align: right;
+}
+
+.icon {
+    width: 20%;
+}
+
+.play {
+    width: 16%;
+}
+
+.overlay-cover {
+    background: linear-gradient(90deg, #000 23%, rgba(3, 3, 3, 0.45702) 45%, transparent);
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 12;
+}

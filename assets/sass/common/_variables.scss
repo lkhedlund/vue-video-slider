@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+$light: #C4C4C4;
+$dark: #707070;
+$primary: #00A1ED;
+
+$duration: 450ms;
+
+// Tiles
+$tileWidth: 375px;
+$tileHeight: 210px;
+$expandWidth: $tileWidth;
+$expandHeight: $tileHeight;
+$tileOffset: ($expandHeight - $tileHeight) / 2;
+$tileShifted: ($expandWidth - $tileWidth) / 2;
+
+// Modal
+$modalHeight: 32vw;
+
+// Grow Factor
+$growFactor: 1.2;
+
+// Movement
+$moveLeft: -($expandWidth * ($growFactor - .6) / 2);
+$moveRight: $expandWidth * ($growFactor - .8);

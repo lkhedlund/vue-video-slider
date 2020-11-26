@@ -1,0 +1,42 @@
+.video-modal {
+    position: relative;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 23%, rgba(3,3,3,0.45702030812324934) 45%, rgba(0,0,0,0) 100%);
+    z-index: 100;
+    
+    min-height: $modalHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    .video-meta {
+        position: relative;
+        padding: 2rem 0;
+        z-index: 15;
+        max-width: 35%;
+        flex: 1 0 100%;
+    }
+}
+
+.vf-btn-close {
+    color: white;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 15;
+}
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-left: 23%;
+
+    video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}

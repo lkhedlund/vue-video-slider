@@ -1,0 +1,29 @@
+// Video
+.video-enter-active, .video-leave-active {
+    transition: opacity 1s;
+}
+
+.video-enter, .video-leave-to {
+    opacity: 0;
+}
+
+// Modal
+.modal-enter-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+ }
+ 
+ .modal-leave-active {
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+ }
+ 
+ .modal-enter-to, .modal-leave {
+    max-height: 100px;
+    overflow: hidden;
+ }
+ 
+ .modal-enter, .modal-leave-to {
+    overflow: hidden;
+    max-height: 0;
+ }
